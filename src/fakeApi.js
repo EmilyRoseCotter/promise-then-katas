@@ -14,7 +14,7 @@ const fetch = (url, requestBody) => {
             return new Promise(resolve => resolve({ data: { dogs: [
                     {
                         name: "Lassie",
-                        naughty: 0
+                        naughty: 1
                     },
                     {
                         name: "Mutley",
