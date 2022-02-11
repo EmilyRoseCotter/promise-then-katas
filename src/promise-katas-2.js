@@ -58,7 +58,10 @@ const dog = () => {
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all
 //
 
-const joke = () => {};
+const joke = () => 
+    Promise.all([fetch("jokes", "question"), fetch("jokes", "answer")]).then(([q, a]) => { 
+        return { question: q.joke, answer: a.answer };
+    });
 
 module.exports = {
     food,
